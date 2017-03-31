@@ -1,0 +1,31 @@
+@import '../variables.less';
+
+@search-input-width: 150px;
+@search-spacing: 30px;
+@button-with: 60px;
+@button-spacing: 5px;
+
+.root {
+  > div {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+
+    > p {
+      display: inline-block;
+    }
+
+    > input,
+    > select {
+      display: inline-block;
+      width: @search-input-width;
+      margin-right: @search-spacing;
+    }
+
+    > button {
+      width: @button-with;
+      margin-right: @button-spacing;
+    }
+  }
+}
+

@@ -1,0 +1,65 @@
+/* 使用bootstrap的bsSize属性时请注意：
+ *  由于bootstrap除了按钮的bsSize支持全部5个大小级别外，其余控件只支持3个级别，所以LOMS不支持所有级别
+ *  LOMS只使用了default、small和large 3个级别，extra small和extra large级别未使用
+ *  LOMS的large相当于bootstrap的default
+ *  LOMS的default相当于bootstrap的small
+ *  LOMS的small相当于bootstrap的extra small
+ */
+
+@default-font-size: 14px;
+//LOMS分割线颜色
+@default-line-color:#d7d7d7;
+
+// 用于覆盖bootstrap中的变量
+@font-family-base: "微软雅黑", "宋体", sans-serif;
+@font-size-base: ceil((@default-font-size * 0.85));
+@font-size-small: @font-size-base;
+@font-size-large: ceil((@default-font-size * 1.25));
+@border-radius-base: 0px;
+@border-radius-large: 0px;
+@border-radius-small: 0px;
+@line-height-base: 1.428571429;
+@line-height-large: 1.3333333;
+@line-height-small: 1.5;
+@brand-primary: #f88c00;
+@brand-success: #4ab776;
+@brand-info: #5bc0de;
+@brand-warning: #f0ad4e;
+@brand-danger: #d9534f;
+@padding-base-vertical: 5px;
+@padding-base-horizontal: 10px;
+@padding-large-vertical: 6px;
+@padding-large-horizontal: 12px;
+@padding-small-vertical: 1px;
+@padding-small-horizontal: 5px;
+
+
+// layout外观
+@layout-font-size: @default-font-size;
+@layout-font-family: @font-family-base;
+
+// 页眉外观(header)
+@header-height: 45px;
+@header-font-size: @default-font-size + 2;
+@header-color: #fff;
+@header-color-bg: @brand-primary;
+@header-hover-bg: darken(@header-color-bg, 5%);
+@header-active-bg: @header-hover-bg;
+
+// 侧边栏外观(sidebar)
+@sidebar-width: 129px;
+@sidebar-min-width: 43px;
+@sidebar-color: black;
+@sidebar-border-color: #d7d7d7;
+@sidebar-color-bg: #f7f4f9;
+@sidebar-hover-bg: #e4e4e4;
+@sidebar-active-bg: @sidebar-hover-bg;
+
+//按钮风格
+@btn-border-radius-base:         4px;
+@btn-border-radius-large:        6px;
+@btn-border-radius-small:        3px;
+
+//Form
+@form-group-margin-bottom:       0px;
+@legend-color:                   black;

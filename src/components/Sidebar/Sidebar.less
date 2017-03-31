@@ -1,0 +1,87 @@
+@import '../variables.less';
+
+@border-size: 1px;
+@image-width: 20px;
+@image-height: 20px;
+@padding-size: (@sidebar-min-width - @image-width - @border-size) / 2;
+
+.root {
+  width: @sidebar-width;
+  background-color: @sidebar-color-bg;
+  border-right: @border-size solid @sidebar-border-color;
+
+  &[data-min] {
+    width: @sidebar-min-width;
+  }
+
+  > header {
+    padding: @padding-size;
+    text-align: right;
+
+    > img {
+      cursor: pointer;
+      width: @image-width;
+      height: @image-height;
+      vertical-align: top;
+    }
+  }
+
+  > nav:nth-child(2) > * {
+    display: block;
+    color: @sidebar-color;
+    padding: @padding-size 0 @padding-size @padding-size;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @sidebar-hover-bg;
+    }
+
+    &[data-active] {
+      background-color: @sidebar-active-bg;
+    }
+
+    &[data-folder] {
+      cursor: default;
+    }
+
+    > img {
+      width: @image-width;
+      height: @image-height;
+      vertical-align: top;
+    }
+
+    > span {
+      margin-left: 10px;
+
+      > *:last-child {
+        float: right;
+        margin-right: 2px;
+      }
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  min-height: inherit;
+  background-color: #6a635b;
+  top: @header-height;
+  left: @sidebar-width - @border-size;
+  z-index: 1051;
+
+  &[data-min] {
+    left: @sidebar-min-width - @border-size;
+  }
+
+  > a {
+    display: block;
+    padding: @padding-size;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #797979;
+    }
+  }
+}

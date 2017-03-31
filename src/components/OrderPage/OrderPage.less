@@ -1,0 +1,29 @@
+@import '../variables';
+
+.root {
+  padding: 15px;
+
+  > * {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &[role='line'] {
+      border: 0;
+      height: 1px;
+      background-color: #e6e6e6;
+    }
+
+    &[role='container'] {
+      width: 100%;
+      overflow: auto;
+
+      > table {
+        white-space: nowrap;
+      }
+    }
+  }
+}

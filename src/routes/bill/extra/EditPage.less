@@ -1,0 +1,37 @@
+@import '../../../components/variables.less';
+
+.root {
+  font-size: @font-size-base;
+  padding: 15px;
+
+  > * {
+    margin-bottom: 15px;
+  }
+
+  [role='title'] {
+    > span {
+      display: inline-block;
+      padding: 2px 5px;
+      border-left: #fb8c00 solid 3px;
+      line-height: 1.4em;
+      vertical-align: middle;
+      font-weight: bold;
+    }
+
+    > * {
+      margin-right: 5px;
+    }
+  }
+
+  [role='operation'] {
+    text-align: center;
+
+    > *:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  [role='container'] {
+    overflow: auto;
+  }
+}

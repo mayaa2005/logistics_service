@@ -1,0 +1,37 @@
+@import '../variables.less';
+
+body {
+  padding: 0;
+  font-weight: 100;
+  font-size: @layout-font-size;
+  font-family: @layout-font-family;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.root {
+  > div {
+    min-height: e('calc(100vh - @{header-height})');
+    height: e('calc(100vh - @{header-height})');
+
+    > aside {
+      float: left;
+      min-height: inherit;
+
+      > aside {
+        min-height: inherit;
+      }
+    }
+
+    > section {
+      overflow: auto;
+      height: inherit;
+
+      > * {
+        min-width: 700px;
+      }
+    }
+  }
+}

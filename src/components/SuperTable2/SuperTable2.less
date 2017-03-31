@@ -1,0 +1,25 @@
+@import '../variables.less';
+
+@table-padding: 5px;
+
+.root {
+  cursor: default;
+  margin-bottom: 0;
+  white-space: nowrap;
+
+  thead > tr > th {
+    background-color: #f2f2f2;
+    vertical-align: middle;
+    padding: @table-padding;
+  }
+
+  tbody > tr > td {
+    vertical-align: middle;
+    padding: @table-padding;
+  }
+
+  input,
+  select {
+    padding: @table-padding - 1;
+  }
+}

@@ -1,0 +1,38 @@
+@import '../variables.less';
+
+@padding-vertical: 10px;
+@padding-horizontal: 15px;
+@default-color: #999;
+@hover-color: @brand-primary;
+@border-color: #e4e4e4;
+@hover-border-color: #fb8c00;
+
+.root {
+  user-select: none;
+  line-height: 1em;
+
+  > span {
+    display: inline-block;
+  }
+}
+
+.default {
+  border-bottom: 3px solid @border-color;
+  color: @default-color;
+
+  > span {
+    cursor: pointer;
+    padding: @padding-vertical @padding-horizontal;
+
+    &:hover,
+    &[data-active] {
+      color: @hover-color;
+      border-bottom: 3px solid @hover-border-color;
+      margin-bottom: -3px;
+    }
+
+    &[data-active] {
+      cursor: default;
+    }
+  }
+}

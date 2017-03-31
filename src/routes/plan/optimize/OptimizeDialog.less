@@ -1,0 +1,30 @@
+@import '../../../components/variables';
+
+.root {
+  font-size: @font-size-base;
+
+  [data-pos='top'] {
+    > *:first-child {
+      margin-bottom: 5px;
+
+      > * {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  [data-pos='bottom'] {
+    > *:first-child {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
+  [role='title'] {
+    display: inline-block;
+    padding: 2px 5px;
+    border-left: #fb8c00 solid 3px;
+    line-height: 1.4em;
+    vertical-align: middle;
+  }
+}

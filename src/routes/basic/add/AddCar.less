@@ -1,0 +1,24 @@
+@import '../../../components/variables';
+
+.root {
+  [data-pos='top'] {
+    > *:first-child {
+      margin-bottom: 5px;
+    }
+  }
+
+  [data-pos='bottom'] {
+    > *:first-child {
+      margin-top: 30px;
+    }
+  }
+
+  [role='title'] {
+    float: left;
+    display: inline-block;
+    padding: 2px 5px;
+    border-left: #fb8c00 solid 3px;
+    line-height: 1.4em;
+    vertical-align: middle;
+  }
+}

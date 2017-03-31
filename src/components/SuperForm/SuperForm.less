@@ -1,0 +1,36 @@
+@import '../variables.less';
+
+.root {
+  display: table;
+  border-spacing: 0 5px;
+  width: 100%;
+  white-space: nowrap;
+
+  > * {
+    display: table-row;
+
+    > * {
+      display: table-cell;
+    }
+
+    > *:nth-child(3n+1) {
+      width: 1px;
+    }
+
+    > *:nth-child(3n+2) {
+      width: 100%;
+    }
+
+    > div:nth-child(3n+2) {
+      width: auto;
+    }
+
+    > *:nth-child(3n+3) {
+      width: 20px;
+    }
+  }
+
+  [role='radios'] > * {
+    padding-right: 10px;
+  }
+}

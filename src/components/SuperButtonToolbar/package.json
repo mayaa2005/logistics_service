@@ -1,0 +1,6 @@
+{
+  "name": "SuperButtonToolbar",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./SuperButtonToolbar.js"
+}

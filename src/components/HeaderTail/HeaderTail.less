@@ -1,0 +1,20 @@
+@import "../variables.less";
+
+.root {
+  text-align: center;
+
+  > * {
+    display: inline-block;
+    width: 70px;
+
+    &:hover {
+      background-color: @header-hover-bg;
+    }
+
+    &:last-child {
+      text-align: left;
+      padding-left: 15px;
+      width: 162px;
+    }
+  }
+}

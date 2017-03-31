@@ -1,0 +1,28 @@
+@import '../variables.less';
+
+.root {
+  background-color: @header-color-bg;
+  color: @header-color;
+  max-height: @header-height;
+  font-size: 0px;
+  line-height: 0px;
+  overflow: auto;
+  text-align: justify;
+
+  > * {
+    display: inline-block;
+    font-size: @header-font-size;
+    line-height: @header-height;
+  }
+
+  &:after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+  }
+
+  a {
+    color: @header-color;
+    text-decoration: none;
+  }
+}

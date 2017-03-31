@@ -1,0 +1,41 @@
+@import '../variables.less';
+
+@search-input-width: 80px;
+@search-spacing: 10px;
+@search-v-spacing: 10px;
+
+.less {
+  > div {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+
+    > p {
+      display: inline-block;
+    }
+
+    > input,
+    > select {
+      display: inline-block;
+      width: @search-input-width;
+      margin-right: @search-spacing;
+    }
+  }
+}
+
+.more {
+  text-align: right;
+
+  > div {
+    margin: 0 0 @search-v-spacing 0 !important;
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    > div {
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import '../variables.less';
+
+.root {
+  line-height: @line-height-base;
+  font-size: 0;
+
+  > * {
+    font-size: @font-size-base;
+    vertical-align: middle;
+    margin-right: 30px;
+
+    &:last-child {
+      font-size: 0;
+      margin-right: 0;
+
+      > * {
+        vertical-align: middle;
+        font-size: @font-size-base;
+      }
+    }
+  }
+}
+
+.small {
+  line-height: @line-height-small;
+
+  > * {
+    font-size: @font-size-small;
+
+    &:last-child {
+      > * {
+        font-size: @font-size-small;
+      }
+    }
+  }
+}
+
+.large {
+  line-height: @line-height-large;
+
+  > * {
+    font-size: @font-size-large;
+
+    &:last-child {
+      > * {
+        font-size: @font-size-large;
+      }
+    }
+  }
+}
+

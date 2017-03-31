@@ -1,0 +1,61 @@
+@import '../../../components/variables.less';
+
+@vertical-spacing: 5px;
+
+.root {
+  font-size: @font-size-base;
+  padding: 15px;
+
+  > *:first-child {
+    margin-bottom: @vertical-spacing;
+
+    > div {
+      margin-bottom: @vertical-spacing;
+
+      > div:first-child {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+    }
+
+    > *:nth-child(3) table {
+      th:last-child {
+        width: 100%;
+      }
+    }
+  }
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  [role='toolbar'] {
+    margin-bottom: @vertical-spacing;
+  }
+
+  [role='container'] {
+    width: inherit;
+    overflow: auto;
+  }
+
+  [role='footer'] {
+    text-align: center;
+
+    > *:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  [aria-expanded='true'] {
+    &::before {
+      content: '\25E2 ';
+    }
+  }
+
+  [aria-expanded='false'] {
+    &::before {
+      content: '\25B6 ';
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../components/variables.less";
+
+.root {
+  text-align: center;
+
+  > * {
+    display: inline-block;
+    width: 95px;
+
+    &:hover {
+      background-color: @header-hover-bg;
+    }
+
+    &.active {
+      background-color: @header-active-bg;
+    }
+  }
+}

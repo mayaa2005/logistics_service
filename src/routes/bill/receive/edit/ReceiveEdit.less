@@ -1,0 +1,39 @@
+@import '../../../../components/variables.less';
+
+.root {
+  padding: 15px;
+  min-width: 700px;
+  min-height: 100%;
+
+  > * {
+    &[role='title'] {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    &[role='line'] {
+      margin: 5px 0;
+      border: 0;
+      height: 1px;
+      background-color: #e6e6e6;
+    }
+
+    &[role='tabContainer'] {
+      margin: 5px 0;
+      width: 100%;
+      height: 300px;
+      overflow: auto;
+    }
+
+    &[role='container'] {
+      margin-top: 5px;
+      width: 100%;
+      overflow: auto;
+
+      > table {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
